@@ -1,10 +1,6 @@
 @import mixin
 
 
-/*--------------------------------------------------------------------*/
-/*--------------------------------------------------------------------*/
-/*--------------------------------------------------------------------*/
-
 .flex-order
     +order(-1)
 @for $i from 0 through 10
@@ -30,61 +26,65 @@
     .flex-basis-#{$i}
         +flex-basis(#{$i}rem)
 
-
+@for $i from 0 through 100
+    .flex-basis-#{$i}p
+        +flex-basis($i+%)
 
 
 /*--------------------------------------------------------------------*/
 
-.flex-A
-    +flex
+.flex, [flex]
+    > .flex, .flex-0
+        +flex(0 1 auto)
+
+.flex, [flex]
+    > .flex-1
+        +flex(1)
+
+// /* 1, 6, 20% */
+// .flex-B
+//     +flex(1, 6, 20%)
 
 
-/* 1, 6, 20% */
-.flex-B
-    +flex(1, 6, 20%)
+// /* 1, 20%, null */
+// .flex-C
+//     +flex(1, 20%)
 
 
-/* 1, 20%, null */
-.flex-C
-    +flex(1, 20%)
-
-
-/* 1, null, null */
-.flex-D
-    +flex(1)
+// /* 1, null, null */
 
 /*--------------------------------*/
 
-.align-self-A
+.align-self
     +align-self
 
 
 /* auto */
-.align-self-B
+.align-self-auto
     +align-self(auto)
 
 
 /* flex-start */
-.align-self-C
+.align-self-start
     +align-self(flex-start)
 
 
 /* flex-end */
-.align-self-D
+.align-self-end
     +align-self(flex-end)
 
 
 /* center */
-.align-self-E
+.align-self-center
     +align-self(center)
 
 
 /* baseline */
-.align-self-F
+.align-self-baseline
     +align-self(baseline)
 
 
 /* stretch */
-.align-self-G
+.align-self-stretch
     +align-self(stretch)
 

@@ -1,16 +1,93 @@
 body
     font-family: 'Arial'
     h1, h2, h3, h4, h5
-        max-width: 840px
-        margin: 0 auto
-.container
-    max-width: 800px
-    padding: 20px
-    background: #cecece
-    min-height: 50px
+        margin: 10px 0
+    h3 
+        margin: 20px 0
+    strong
+        color: #FF7733
+ul 
+    li 
+        margin-bottom: 10px
+        line-height: 1.5rem
+.wrapper
+    display: table
     margin: 10px auto
-    > .demo 
+    max-width: 1200px
+    width: 100%
+    .row 
+        display: table-caption
+    .left 
+        width: 800px
+        vertical-align: top
+        display: table-cell
+        .tx 
+            padding: 5px 0
+    .right 
+        // width: 380px
+        
+        display: table-cell
+        vertical-align: middle
+        padding: 0  0 0 20px
+        .text-right 
+            text-align: right
+        img 
+            margin: 0
+            text-align: right
+            max-width: 100%
+pre 
+    margin: 5px 0
+    background: #795548
+    color: #fff
+    border-radius: 3px
+    padding: 5px 8px
+    display: inline
+code 
+    background: #545454
+    color: #abfffc
+    border-radius: 3px 
+    padding: 3px 5px
+    margin: 0 3px
+.container
+    max-width: 780px
+    padding: 20px
+    background: #ececec
+    min-height: 50px
+    margin: 10px 0
+    &.hk
+        min-height: 100px
+    .demo 
         background: #ccff00
         padding: 0 5px
-        height: 30px
+        // height: 30px
+        &:nth-child(2)
+            background: #50fff0
+        &:nth-child(3)
+            background: #e75aff
+        &:nth-child(4)
+            background: #ffd600
+        &:nth-child(5)
+            background: #88cbff
+        &.wp
+            min-width: 160px
+        &.wp-1
+            min-width: 80px
+        &.wp-2
+            min-width: 40px
+        &.wp-3
+            min-width: 200px
+        &.wp-4
+            min-width: 260px
+        &.wp-5
+            min-width: 48%
+        &.hp
+            min-height: 20px
+        &.hp-1
+            min-height: 40px
+        &.hp-2
+            min-height: 50px
+        &.hp-3
+            min-height: 30px
+        &.hp-4
+            min-height: 10px
         
