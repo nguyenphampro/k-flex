@@ -18,10 +18,10 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
 
     // Run task
     gulp.task('inject', () => {
-        var target2 = gulp.src(path.join(target, '**/*.html'));
-        return target2.pipe(inject(gulp.src([
-                path.join(target, '**/*.css'),
-                path.join(target, '**/*.js')
+        var targetinject = gulp.src(path.join(target, '**/*.html'));
+        return targetinject.pipe(inject(gulp.src([
+                path.join(target, '**/*.js'),
+                path.join(target, '**/*.css')
             ], {
                 read: false,
                 ignorePath: '/' + target + '/',

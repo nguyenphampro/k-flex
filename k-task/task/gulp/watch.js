@@ -50,7 +50,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
             // Templates
             gulp.watch([
                 path.join(url.source, '**/*.jade')
-            ], ['jade', 'inject']);
+            ], ['jade']);
 
             gulp.watch([
                 path.join(url.source, '**/*.nunjucks')

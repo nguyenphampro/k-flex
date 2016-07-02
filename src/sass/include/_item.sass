@@ -1,0 +1,90 @@
+@import mixin
+
+
+/*--------------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+/*--------------------------------------------------------------------*/
+
+.flex-order
+    +order(-1)
+@for $i from 0 through 10
+    .flex-order-#{$i}
+        +order(#{$i})
+
+
+/*--------------------------------------------------------------------*/
+
+@for $i from 0 through 10
+    .flex-grow-#{$i}
+        +flex-grow(#{$i})
+
+/*--------------------------------------------------------------------*/
+
+@for $i from 1 through 10
+    .flex-shrink-#{$i}
+        +flex-shrink(#{$i})
+
+/*--------------------------------------------------------------------*/
+
+@for $i from 1 through 50
+    .flex-basis-#{$i}
+        +flex-basis(#{$i}rem)
+
+
+
+
+/*--------------------------------------------------------------------*/
+
+.flex-A
+    +flex
+
+
+/* 1, 6, 20% */
+.flex-B
+    +flex(1, 6, 20%)
+
+
+/* 1, 20%, null */
+.flex-C
+    +flex(1, 20%)
+
+
+/* 1, null, null */
+.flex-D
+    +flex(1)
+
+/*--------------------------------*/
+
+.align-self-A
+    +align-self
+
+
+/* auto */
+.align-self-B
+    +align-self(auto)
+
+
+/* flex-start */
+.align-self-C
+    +align-self(flex-start)
+
+
+/* flex-end */
+.align-self-D
+    +align-self(flex-end)
+
+
+/* center */
+.align-self-E
+    +align-self(center)
+
+
+/* baseline */
+.align-self-F
+    +align-self(baseline)
+
+
+/* stretch */
+.align-self-G
+    +align-self(stretch)
+

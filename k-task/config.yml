@@ -40,10 +40,10 @@ config:
 # Styles
   styles: 
     assets: "css"
-    root: "styles"
+    root: "sass"
     css: "styles/css"
     less: "styles/less"
-    sass: "styles/sass"
+    sass: "sass"
     stylus: "styles/stylus"
 # Ignore
   ignore: 

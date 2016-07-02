@@ -1,11 +1,88 @@
 extends _layout/layout
-//- Variables for each page 
 block variables
-  - var title = 'Custom Title'
+  - var title = 'SASS'
   - var bodyclass = 'index'
-//- Begin page
+  //- Begin page
 block body 
-  h1=config.title
-  p=config.SEO.cfg_description
-  p=_data.config.CON.version
-  p=_data.info.SET.name
+  h5 Flex
+  .container.flex
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex Row
+  .container.flex.flex-row
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex Column
+  .container.flex.flex-col
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex Wrap
+  .container.flex.flex-wrap
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex justify-content-center
+  .container.flex.flex-content-center
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex justify-content-between
+  .container.flex.flex-content-between
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex justify-content-around
+  .container.flex.flex-content-around
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex justify-content-end
+  .container.flex.flex-content-end
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-items-center
+  .container.flex.align-items-center
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-items-end
+  .container.flex.align-items-end
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-items-baseline
+  .container.flex.align-items-baseline
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-items-stretch
+  .container.flex.align-items-stretch
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-content-around
+  .container.flex.align-content-around
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-content-center
+  .container.flex.align-content-center
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-content-between
+  .container.flex.align-content-between
+    .demo 1
+    .demo 2
+    .demo 3
+  h5 Flex align-content-stretch
+  .container.flex.align-content-stretch
+    .demo 1
+    .demo 2
+    .demo 3
+
+

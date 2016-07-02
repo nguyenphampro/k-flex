@@ -68,12 +68,12 @@ gulp.task('build', ['cleanall'], () => {
 // Basic production-ready code
 gulp.task('k-task', function(cb) {
     runSequence(
-        'babel', // babel-concat
-        'concat',
-        'copy',
-        'fonts',
         'sass', // css, less, stylus 
         'jade', // hamber, ejs, pug 
+        // 'babel', // babel-concat
+        // 'concat',
+        'copy',
+        // 'fonts',
         cb
     );
 });
@@ -82,7 +82,7 @@ gulp.task('k-task', function(cb) {
 gulp.task('live', function(cb) {
     runSequence(
         'k-task',
-        'inject',
+        // 'inject',
         'browserSync',
         'watch',
         cb
