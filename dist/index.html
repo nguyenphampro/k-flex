@@ -1,25 +1,4 @@
-<!--
-$$$$$$$\   $$$$$$\   $$$$$$\  $$\   $$\  $$$$$$\  $$\   $$\ $$\     $$\ $$$$$$$$\ $$\   $$\ 
-$$  __$$\ $$  __$$\ $$  __$$\ $$$\  $$ |$$  __$$\ $$ |  $$ |\$$\   $$  |$$  _____|$$$\  $$ |
-$$ |  $$ |$$ /  $$ |$$ /  $$ |$$$$\ $$ |$$ /  \__|$$ |  $$ | \$$\ $$  / $$ |      $$$$\ $$ |
-$$$$$$$\ |$$$$$$$$ |$$ |  $$ |$$ $$\$$ |$$ |$$$$\ $$ |  $$ |  \$$$$  /  $$$$$\    $$ $$\$$ |
-$$  __$$\ $$  __$$ |$$ |  $$ |$$ \$$$$ |$$ |\_$$ |$$ |  $$ |   \$$  /   $$  __|   $$ \$$$$ |
-$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |\$$$ |$$ |  $$ |$$ |  $$ |    $$ |    $$ |      $$ |\$$$ |
-$$$$$$$  |$$ |  $$ | $$$$$$  |$$ | \$$ |\$$$$$$  |\$$$$$$  |    $$ |    $$$$$$$$\ $$ | \$$ |
-\_______/ \__|  \__| \______/ \__|  \__| \______/  \______/     \__|    \________|\__|  \__|
-Coding by: Bao Nguyen
-Tel: 0.96.96.89.89.3
-Email: baonguyenyam@gmail.com
-URL: fb.com/pham.nguyen.bao.nguyen, 
-baonguyenyam.github.io
-baonguyenyam.blogspot.com
-Demo Web-App: http://baonguyenyam.herokuapp.com/
---><!DOCTYPE html><!--[if lt IE 9]>
-<html class='lt-ie9 no-js' lang='en'>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8">
@@ -72,7 +51,8 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
     <link rel="alternate" hreflang="x-default" href="/baonguyenyam.github.io/">
     <link rel="alternate" hreflang="vi-VN" href="/baonguyenyam.github.io/">
     <!-- inject:css -->
-    <link rel="stylesheet" href="/css/flex.min-b35f2d7a.css">
+    <link rel="stylesheet" href="./css/demo.min-7cdc82be.css">
+    <link rel="stylesheet" href="./css/k-flex.min-16170a98.css">
     <!-- endinject -->
   <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32">
@@ -85,6 +65,465 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
 <meta name="msapplication-config" content="/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff"></head>
   <body class="bn-index">
+    <div class="wrapper">
+      <div class="row"> 
+        <h1>Welcome to K-FLEX Core</h1>
+        <p>This is a framework CSS for Flex, easy to intial flex-box using class and attr. Author: Bao Nguyen at <a href="http://baonguyenyam.github.io/" target="_blank" class="class">baonguyenyam.github.io</a></p>
+        <h2 style="margin-top:2rem">Flex Container</h2>
+        <h3>Initial Flex</h3>
+        <hr>
+        <p>This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.</p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex or [flex]</strong></p>
+        <div class="container flex">
+          <div class="demo">1</div>
+          <div class="demo">2</div>
+          <div class="demo">3</div>
+        </div>
+        <div class="tx">
+          Container default is<code>display: flex</code> 
+          Item default is null or <code>flex: 0 1 auto</code>
+        </div>
+        <div class="tx">
+          Call flex box with class <code>.flex</code> 
+          OR attr<code>flex</code>
+        </div>
+        <p> <b>HTML:</b>
+          <pre>&lt;div class="flex"&gt;&lt;/div&gt; or &lt;div flex&gt;&lt;/div&gt; or &lt;flex&gt;&lt;/flex&gt;</pre>
+        </p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  display: flex /* or inline-flex */
+}
+</pre>
+        </p>
+      </div>
+      <div class="right"><img src="img/flex-container.svg" alt="alt" class="class"><img src="img/flex-items.svg" alt="alt" class="class"></div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex direction</h3>
+        <p>This establishes the main-axis, thus defining the direction flex items are placed in the flex container. Flexbox is (aside from optional wrapping) a single-direction layout concept. Think of flex items as primarily laying out either in horizontal rows or vertical columns.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex-direction: row | row-reverse | column | column-reverse; 
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-row</strong></p>
+        <div class="container flex flex-row">
+          <div class="demo wp">1</div>
+          <div class="demo wp-2">2</div>
+          <div class="demo wp-1">3</div>
+        </div>
+        <p> <strong>.flex-row-rev</strong></p>
+        <div class="container flex flex-row-rev">
+          <div class="demo wp">1</div>
+          <div class="demo wp-1">2</div>
+          <div class="demo wp-3">3</div>
+        </div>
+        <p> <strong>.flex-col</strong></p>
+        <div class="container flex flex-col">
+          <div class="demo">1</div>
+          <div class="demo">2</div>
+          <div class="demo">3</div>
+        </div>
+        <p> <strong>.flex-col-rev</strong></p>
+        <div class="container flex flex-col-rev">
+          <div class="demo">1</div>
+          <div class="demo">2</div>
+          <div class="demo">3</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/flex-direction1.svg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex inline</h3>
+      </div>
+      <div class="left"> 
+        <p> <strong>.flex-inline.flex-row-rev</strong></p>
+        <div class="container flex flex-inline flex-row-rev">
+          <div class="demo wp">1</div>
+          <div class="demo wp-2">2</div>
+          <div class="demo wp-4">3</div>
+        </div>
+        <p> <strong>.flex-inline.flex-col-rev</strong></p>
+        <div class="container flex flex-inline flex-col-rev">
+          <div class="demo wp">1</div>
+          <div class="demo wp">2</div>
+          <div class="demo">3</div>
+        </div>
+      </div>
+      <div class="right"> </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex Wrap</h3>
+        <p>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property. Direction also plays a role here, determining the direction new lines are stacked in.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-nowrap</strong></p>
+        <div class="container flex flex-nowrap">
+          <div class="demo wp">1</div>
+          <div class="demo wp">2</div>
+          <div class="demo wp">3</div>
+          <div class="demo wp">4</div>
+          <div class="demo wp">5</div>
+        </div>
+        <p> <strong>.flex-wrap</strong></p>
+        <div class="container flex flex-wrap">
+          <div class="demo wp-3">1</div>
+          <div class="demo wp">2</div>
+          <div class="demo wp-4">3</div>
+          <div class="demo wp">4</div>
+          <div class="demo wp">5</div>
+        </div>
+        <p> <strong>.flex-wrap-rev</strong></p>
+        <div class="container flex flex-wrap-rev">
+          <div class="demo wp">1</div>
+          <div class="demo wp-3">2</div>
+          <div class="demo wp">3</div>
+          <div class="demo wp">4</div>
+          <div class="demo wp">5</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/flex-wrap.svg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex Justify Content</h3>
+        <p>This defines the alignment along the main axis. It helps distribute extra free space left over when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size. It also exerts some control over the alignment of items when they overflow the line.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-content-center</strong></p>
+        <div class="container flex flex-content-center">
+          <div class="demo wp-2">1</div>
+          <div class="demo wp-4">2</div>
+          <div class="demo wp">3</div>
+        </div>
+        <p> <strong>.flex-content-between</strong></p>
+        <div class="container flex flex-content-between">
+          <div class="demo wp-2">1</div>
+          <div class="demo wp-3">2</div>
+          <div class="demo wp">3</div>
+        </div>
+        <p> <strong>.flex-content-around</strong></p>
+        <div class="container flex flex-content-around">
+          <div class="demo wp-1">1</div>
+          <div class="demo wp-2">2</div>
+          <div class="demo wp">3</div>
+        </div>
+        <p> <strong>.flex-content-end</strong></p>
+        <div class="container flex flex-content-end">
+          <div class="demo wp">1</div>
+          <div class="demo wp-2">2</div>
+          <div class="demo wp">3</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/justify-content.svg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex Align Items</h3>
+        <p>This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>Flex align-items-center</strong></p>
+        <div class="container flex align-items-center">
+          <div class="demo wp-2 hp">1</div>
+          <div class="demo wp-4 hp-2">2</div>
+          <div class="demo wp-3 hp-3">3</div>
+        </div>
+        <p> <strong>Flex align-items-end</strong></p>
+        <div class="container flex align-items-end">
+          <div class="demo wp-2 hp">1</div>
+          <div class="demo wp-4 hp-2">2</div>
+          <div class="demo wp-3 hp-3">3</div>
+        </div>
+        <p> <strong>Flex align-items-baseline</strong></p>
+        <div class="container flex align-items-baseline">
+          <div class="demo wp-2 hp">1</div>
+          <div class="demo wp-4 hp-2">2</div>
+          <div class="demo wp-3 hp-3">3</div>
+        </div>
+        <p> <strong>Flex align-items-stretch</strong></p>
+        <div class="container flex align-items-stretch">
+          <div class="demo wp-2 hp">1</div>
+          <div class="demo wp-4 hp-2">2</div>
+          <div class="demo wp-3 hp-3">3</div>
+        </div>
+        <ul>
+          <li><code>flex-start</code>: cross-start margin edge of the items is placed on the cross-start line</li>
+          <li><code>flex-end</code>: cross-end margin edge of the items is placed on the cross-end line</li>
+          <li><code>center</code>: items are centered in the cross-axis</li>
+          <li><code>baseline</code>: items are aligned such as their baselines align</li>
+          <li><code>stretch</code> (default): stretch to fill the container (still respect min-width/max-width)</li>
+        </ul>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/align-items.svg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex Align Content</h3>
+        <p>This aligns a flex container's lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis.</p>
+        <p> <code>Note: this property has no effect when there is only one line of flex items.</code></p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.align-content-around</strong></p>
+        <div class="container hk flex flex-row flex-wrap align-content-around">
+          <div class="demo wp-5 hp-4">1</div>
+          <div class="demo wp-5 hp-4">2</div>
+          <div class="demo wp-5 hp-4">3</div>
+          <div class="demo wp-5 hp-4">4</div>
+        </div>
+        <p> <strong>.align-content-start</strong></p>
+        <div class="container hk flex flex-row flex-wrap align-content-start">
+          <div class="demo wp-5 hp-4">1</div>
+          <div class="demo wp-5 hp-4">2</div>
+          <div class="demo wp-5 hp-4">3</div>
+          <div class="demo wp-5 hp-4">4</div>
+        </div>
+        <p> <strong>.align-content-between</strong></p>
+        <div class="container hk flex flex-row flex-wrap align-content-between">
+          <div class="demo wp-5 hp-4">1</div>
+          <div class="demo wp-5 hp-4">2</div>
+          <div class="demo wp-5 hp-4">3</div>
+          <div class="demo wp-5 hp-4">4</div>
+        </div>
+        <p> <strong>.align-content-stretch</strong></p>
+        <div class="container hk flex flex-row flex-wrap align-content-stretch">
+          <div class="demo wp-5 hp-4">1</div>
+          <div class="demo wp-5 hp-4">2</div>
+          <div class="demo wp-5 hp-4">3</div>
+          <div class="demo wp-5 hp-4">4</div>
+        </div>
+        <p> <strong>.align-content-center</strong></p>
+        <div class="container hk flex flex-row flex-wrap align-content-center">
+          <div class="demo wp-5 hp-4">1</div>
+          <div class="demo wp-5 hp-4">2</div>
+          <div class="demo wp-5 hp-4">3</div>
+          <div class="demo wp-5 hp-4">4</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/align-content.svg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <hr>
+    <div class="wrapper">
+      <div class="row"> 
+        <h2 style="margin-top:2rem">Flex Items</h2>
+        <hr>
+        <h3>Flex Order</h3>
+        <p>By default, flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. </p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  order: &lt;integer&gt;; /* -1, 0, 1, ...*/
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>Normal</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo wp">.flex-order-4</div>
+          <div class="demo wp">.flex-order-1</div>
+          <div class="demo wp">.flex-order-2</div>
+          <div class="demo wp">.flex-order-3</div>
+        </div>
+        <p> <strong>.flex-order-*</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo wp flex-order-4">.flex-order-4</div>
+          <div class="demo wp flex-order-1">.flex-order-1</div>
+          <div class="demo wp flex-order-2">.flex-order-2</div>
+          <div class="demo wp flex-order-3">.flex-order-3</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/order.jpg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex grow</h3>
+        <p>This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+        <p>If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children. If one of the children a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least).</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex-grow: &lt;number&gt;; /* default: 0 */
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-grow-0</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-grow-0">1</div>
+          <div class="demo flex-grow-0">2</div>
+          <div class="demo flex-grow-0">3</div>
+          <div class="demo flex-grow-0">4</div>
+        </div>
+        <p> <strong>.flex-grow-1</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-grow-1">1</div>
+          <div class="demo flex-grow-1">2</div>
+          <div class="demo flex-grow-1">3</div>
+          <div class="demo flex-grow-1">4</div>
+        </div>
+        <p> <strong>.flex-grow-*</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-grow-1">.flex-grow-1</div>
+          <div class="demo flex-grow-1">.flex-grow-1</div>
+          <div class="demo flex-grow-3">.flex-grow-3</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/flex-grow.jpg" alt="alt" class="class"><img src="img/flex-grow2.jpg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex shrink</h3>
+        <p>This defines the ability for a flex item to shrink if necessary.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex-shrink: &lt;number&gt;; /* default: 1 */
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-shrink-1</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-shrink-1">item</div>
+          <div class="demo flex-shrink-1">item</div>
+          <div class="demo flex-shrink-1">item</div>
+          <div class="demo flex-shrink-1">item</div>
+        </div>
+        <p> <strong>.flex-shrink-*</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-grow-1">item</div>
+          <div class="demo flex-shrink-0 flex-grow-1">.flex-shrink-0</div>
+          <div class="demo flex-grow-1">item</div>
+          <div class="demo flex-grow-1">item</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/flex-shrink.jpg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex basis</h3>
+        <p>This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property" (which was temporarily done by the main-size keyword until deprecated). The content keyword means "size it based on the item's content" - this keyword isn't well supported yet, so it's hard to test and harder to know what its brethren max-content, min-content, and fit-content do.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex-basis: &lt;length&gt;; /* default: auto */
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.flex-basis-* => *rem</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-basis-3">3rem</div>
+          <div class="demo flex-basis-3">3rem</div>
+          <div class="demo flex-basis-3">3rem</div>
+          <div class="demo flex-basis-3">3rem</div>
+        </div>
+        <p> <strong>.flex-basis-*p => *%</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo flex-basis-30p">30%</div>
+          <div class="demo flex-basis-20p">20%</div>
+          <div class="demo flex-basis-10p">10%</div>
+          <div class="demo flex-basis-10p">10%</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/flex-basis.jpg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex</h3>
+        <p>This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  flex: none | auto | [ &lt;flex-grow&gt; &lt;flex-shrink&gt;? || &lt;flex-basis&gt; ];
+}
+</pre>
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="row"> 
+        <hr>
+        <h3>Flex Align self</h3>
+        <p>This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. Please see the align-items explanation to understand the available values.</p>
+        <p> <b>CSS:</b>
+          <pre class="prettyprint">.class { 
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}</pre>
+        </p>
+      </div>
+      <div class="left">
+        <p> <strong>.align-self-end</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo align-self-end">3rem</div>
+          <div class="demo">item</div>
+          <div class="demo">item</div>
+          <div class="demo">item</div>
+        </div>
+        <p> <strong>.align-self-stretch</strong></p>
+        <div class="container flex flex-row flex-wrap">
+          <div class="demo align-self-center">item</div>
+          <div class="demo">item</div>
+          <div class="demo">item</div>
+          <div class="demo">item</div>
+        </div>
+      </div>
+      <div class="right"> 
+        <div class="text-right"> <img src="img/align-self.jpg" alt="alt" class="class"></div>
+      </div>
+    </div>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert&amp;lang=css&amp;lang=ml"></script>
     <!-- inject:js -->
     <!-- endinject -->
     <script>
@@ -96,4 +535,4 @@ Demo Web-App: http://baonguyenyam.herokuapp.com/
       ga('send', 'pageview');
     </script>
   </body>
-</html></html>
+</html>
