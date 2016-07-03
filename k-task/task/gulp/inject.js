@@ -27,7 +27,7 @@ module.exports = function(gulp, setgulp, plugins, config, target, browserSync) {
                 ignorePath: '/' + target + '/',
                 addRootSlash: true
             })))
-            .pipe(replace('/' + target + '/', '/'))
+            .pipe(replace('/' + target + '/', './'))
             .pipe(gulp.dest(dest));
     });
 

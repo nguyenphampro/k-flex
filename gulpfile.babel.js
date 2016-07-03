@@ -103,11 +103,12 @@ gulp.task('product', function(cb) {
         'csscomb',
         'tobase64',
         'packer',
-        'rev',
-        'delete-css',
-        'delete-js',
-        'delete-packer',
-        'revreplace',
+        'inject',
+        // 'rev',
+        // 'delete-css',
+        // 'delete-js',
+        // 'delete-packer',
+        // 'revreplace',
         cb
     );
 });
