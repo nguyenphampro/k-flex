@@ -1,3 +1,8 @@
+##Demo 
+
+http://baonguyenyam.github.io/docs/k-flex/
+
+---
 
 ## This is a framework CSS for Flex, easy to intial flex-box using class and attr.
 
